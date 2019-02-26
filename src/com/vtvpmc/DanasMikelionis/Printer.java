@@ -12,7 +12,10 @@ public class Printer {
 		return scanner.nextDouble();
 	}
 	
-	public static void printBeforeSecondNumber(double firstNumber, int arithmeticOperator) {
+	public static void printBeforeSecondNumber(double firstNumber,
+			int arithmeticOperator) {
+		System.out.println("-----------------------------------"
+				+ "----------------------------");
 		switch (arithmeticOperator) {
 		case 1:
 			System.out.print(printDouble(firstNumber) + " + ");
@@ -71,35 +74,40 @@ public class Printer {
 				System.out.println(printDouble(secondNumber) + " = " + printDouble(answer));
 				break;
 			case 8:
-				answer = Math.sin(firstNumber);
-				System.out.println("sin of " + printDouble(firstNumber) + " = " + printDouble(answer));
+				answer = Math.toRadians(Math.sin(firstNumber));
+				System.out.println("sin of " + printDouble(firstNumber)
+					+ " = " + printDouble(answer));
 				break;
 			case 9:
-				answer = Math.cos(firstNumber);
-				System.out.println("cos of " + printDouble(firstNumber) + " = " + printDouble(answer));
+				answer = Math.toRadians(Math.cos(firstNumber));
+				System.out.println("cos of " + printDouble(firstNumber) + " = "
+						+ printDouble(answer));
 				break;
 			case 10:
-				answer = Math.tan(firstNumber);
-				System.out.println("tg of " + printDouble(firstNumber) + " = " + printDouble(answer));
+				answer = Math.tan(Math.toRadians(firstNumber));
+				System.out.println("tg of " + printDouble(firstNumber) + " = "
+						+ printDouble(answer));
 				break;
 			case 11:
-				answer = 1 / Math.tan(firstNumber);
-				System.out.println("ctg of " + printDouble(firstNumber) + " = " + printDouble(answer));
+				answer = Math.tan(1 / Math.toRadians(firstNumber));
+				System.out.println("ctg of " + printDouble(firstNumber) + " = "
+						+ printDouble(answer));
 				break;
 			default:
-				//case 12:
 				answer = (int)firstNumber % (int)secondNumber;
 				System.out.println(printDouble(secondNumber) + " = "
 						+ printDouble((int)firstNumber / (int)secondNumber) 
 						+ " (remainder = " + printDouble(answer) + ")");	
 			}
-			System.out.println("----------------------------------------");
+			System.out.println("------------------------------"
+					+ "--------------------------------");
 			return answer;
 	}
 	
 	public static void printMenu(double firstNumber) {
 		System.out.println("What action?");
-		System.out.println("----------------------------------------");
+		System.out.println("----------------------------------------"
+				+ "-----------------------");
 		System.out.println("1 = sum;");
 		System.out.println("2 = subtract;");
 		System.out.println("3 = multiply;");
@@ -119,11 +127,12 @@ public class Printer {
 	}
 	
 	public static String printDouble(double number) {
-		int indexOfDecimal = String.valueOf(number).indexOf('.');
 		if (number == (int)number) {
 			return String.valueOf((int)number);
+		} else if (String.valueOf(number).equals("infinity")) {
+			return "-\ncan not divide by zero.";
 		} else {
-			return (String.valueOf(number) + "000").substring(0, indexOfDecimal + 5);
+			return String.format("%.4f", number);
 		}
 	}
 }
