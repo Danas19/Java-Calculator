@@ -3,14 +3,14 @@ package com.vtvpmc.DanasMikelionis;
 public class Calculator {
 	public static void main(String[] args) {
 		Reader scanner = new Reader();
-		double firstNumber;
+		double firstNumber = 0;
 		double secondNumber;
 		double answer = 0;
 		int arithmeticOperator;
 		boolean firstNumberNeeded = true;
 		
 		while (true) {
-			if (firstNumberNeeded) {
+			if (firstNumberNeeded || Double.valueOf(answer).isInfinite()) {
 				firstNumber = Printer.enterFirstNumber(scanner);
 			} else {
 				firstNumber = answer;

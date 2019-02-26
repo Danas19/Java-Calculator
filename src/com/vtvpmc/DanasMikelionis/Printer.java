@@ -94,8 +94,6 @@ public class Printer {
 						+ printDouble((int)firstNumber / (int)secondNumber) 
 						+ " (remainder = " + printDouble(answer) + ")");	
 			}
-			System.out.println("------------------------------"
-					+ "--------------------------------");
 			return answer;
 	}
 	
@@ -119,14 +117,15 @@ public class Printer {
 			System.out.println("\n12 = divide and show remainder: ");
 		}
 		System.out.println("0 = new first number.");
-		System.out.print("> ");
+		System.out.print("Enter operation's equivalent in number with number: "
+				+ printDouble(firstNumber) + "\n> ");
 	}
 	
 	public static String printDouble(double number) {
 		if (number == (int)number) {
 			return String.valueOf((int)number);
 		} else if (Double.valueOf(number).isInfinite()) {
-			return "-\ncan not divide by zero.";
+			return "-";
 		} else {
 			return String.format("%.4f", number);
 		}
