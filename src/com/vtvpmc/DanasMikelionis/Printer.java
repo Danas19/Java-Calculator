@@ -101,7 +101,7 @@ public class Printer {
 		System.out.println("What action?");
 		System.out.println("----------------------------------------"
 				+ "-----------------------");
-		System.out.print("1 = sum;\t5 = root;\t\t9 = cos (in radians);");
+		System.out.print("1 = " + printDouble(firstNumber) + " + ?;\t5 = root;\t\t9 = cos (in radians);");
 		if (firstNumber ==(int)firstNumber) {
 			System.out.println("\t12 = divide and show remainder;");
 		} else {
