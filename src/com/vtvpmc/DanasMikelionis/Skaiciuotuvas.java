@@ -1,3 +1,4 @@
+package com.vtvpmc.DanasMikelionis;
 
 public class Skaiciuotuvas {
 	public static void main(String[] args) {
