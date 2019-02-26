@@ -1,11 +1,6 @@
 package com.vtvpmc.DanasMikelionis;
 
 public class Printer {
-	public static void askFirstNumberEqualsAnswer(double answer) {
-		System.out.println("Continue as though first number is "
-				+ Printer.printDouble(answer) + "? 1 = yes; 2 = no.");
-		System.out.print("> ");
-	}
 	
 	public static double enterFirstNumber(Reader scanner) {
 		System.out.print("Enter first number: ");
@@ -92,7 +87,7 @@ public class Printer {
 				answer = Math.tan(1 / Math.toRadians(firstNumber));
 				System.out.println("ctg of " + printDouble(firstNumber) + " = "
 						+ printDouble(answer));
-				break;
+				break;	
 			default:
 				answer = (int)firstNumber % (int)secondNumber;
 				System.out.println(printDouble(secondNumber) + " = "
@@ -123,6 +118,7 @@ public class Printer {
 		if (firstNumber ==(int)firstNumber) {
 			System.out.println("\n12 = divide and show remainder: ");
 		}
+		System.out.println("0 = new first number.");
 		System.out.print("> ");
 	}
 	

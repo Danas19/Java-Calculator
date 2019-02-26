@@ -8,7 +8,6 @@ public class Calculator {
 		double answer = 0;
 		int arithmeticOperator;
 		boolean firstNumberNeeded = true;
-		int temporary;
 		
 		while (true) {
 			if (firstNumberNeeded) {
@@ -21,21 +20,20 @@ public class Calculator {
 			
 			arithmeticOperator = scanner.nextInt();
 			
-			Printer.printBeforeSecondNumber(firstNumber, arithmeticOperator);
-			
-			secondNumber =
-					enterAndReturnSecondNumber(firstNumber, arithmeticOperator, scanner);
-			
-			Printer.printBeforeSecondNumber(firstNumber, arithmeticOperator);
-			answer = Printer.printAnswer(firstNumber, secondNumber, arithmeticOperator);
-			
-			Printer.askFirstNumberEqualsAnswer(answer);
-			temporary = scanner.nextInt();
-			if (temporary == 1) {
+			if (arithmeticOperator != 0) {
+				Printer.printBeforeSecondNumber(firstNumber, arithmeticOperator);
+				
+				secondNumber =
+						enterAndReturnSecondNumber(firstNumber, arithmeticOperator, scanner);
+				
+				Printer.printBeforeSecondNumber(firstNumber, arithmeticOperator);
+				answer = Printer.printAnswer(firstNumber, secondNumber, arithmeticOperator);
+				
 				firstNumberNeeded = false;
 			} else {
 				firstNumberNeeded = true;
 			}
+			
 		}
 		
 	}
