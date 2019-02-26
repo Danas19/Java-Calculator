@@ -103,7 +103,7 @@ public class Printer {
 				+ "-----------------------");
 		System.out.print("1 = " + printDouble(firstNumber) + " + ?;"
 				+ "\t5 = sq. root from " + printDouble(firstNumber) + ";"
-						+ "\t\t9 = cos from" + printDouble(firstNumber) + "(radians);");
+						+ "\t\t9 = cos from " + printDouble(firstNumber) + "(radians);");
 		if (firstNumber ==(int)firstNumber) {
 			System.out.println("\t12 = divide " + printDouble(firstNumber) 
 					+ " from ? and show remainder;");
@@ -121,8 +121,8 @@ public class Printer {
 		System.out.println("4 = " + printDouble(firstNumber) + " : ?;"
 				+ "\t8 = sin from " + printDouble(firstNumber) + "(radians);");
 
-		System.out.print("Enter operation's equivalent in number with number: "
-				+ printDouble(firstNumber) + "\n> ");
+		System.out.println("Enter operation's equivalent in number.");
+		System.out.print("> ");
 	}
 	
 	public static String printDouble(double number) {
