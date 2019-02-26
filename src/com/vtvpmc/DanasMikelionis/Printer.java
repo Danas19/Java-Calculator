@@ -101,22 +101,20 @@ public class Printer {
 		System.out.println("What action?");
 		System.out.println("----------------------------------------"
 				+ "-----------------------");
-		System.out.println("1 = sum;");
-		System.out.println("2 = subtract;");
-		System.out.println("3 = multiply;");
-		System.out.println("4 = divide;");
-		System.out.println("\n5 = root;");
-		System.out.println("6 = " + printDouble(firstNumber) + " X "
-				+ printDouble(firstNumber) + ";");
-		System.out.println("7 = power(any degree);");
-		System.out.println("\n8 = sin (in radians);");
-		System.out.println("9 = cos (in radians);");
-		System.out.println("10 = tg (in radians);");
-		System.out.println("11 = ctg (in radians);");
+		System.out.print("1 = sum;\t5 = root;\t\t9 = cos (in radians);");
 		if (firstNumber ==(int)firstNumber) {
-			System.out.println("\n12 = divide and show remainder: ");
+			System.out.println("\t12 = divide and show remainder;");
+		} else {
+			System.out.println();
 		}
-		System.out.println("0 = new first number.");
+		System.out.println("2 = subtract;\t6 = " 
+			+ printDouble(firstNumber) + " X "
+				+ printDouble(firstNumber) + ";\t\t10 = tg (in radians);"
+						+ "\t0 = new first number.");
+		System.out.println("3 = multiply;\t7 = power(any degree);"
+				+ "\t11 = ctg (in radians);");
+		System.out.println("4 = divide;\t8 = sin (in radians);");
+
 		System.out.print("Enter operation's equivalent in number with number: "
 				+ printDouble(firstNumber) + "\n> ");
 	}
