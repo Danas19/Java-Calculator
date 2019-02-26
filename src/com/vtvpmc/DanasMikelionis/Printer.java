@@ -101,19 +101,25 @@ public class Printer {
 		System.out.println("What action?");
 		System.out.println("----------------------------------------"
 				+ "-----------------------");
-		System.out.print("1 = " + printDouble(firstNumber) + " + ?;\t5 = root;\t\t9 = cos (in radians);");
+		System.out.print("1 = " + printDouble(firstNumber) + " + ?;"
+				+ "\t5 = sq. root from " + printDouble(firstNumber) + ";"
+						+ "\t\t9 = cos from" + printDouble(firstNumber) + "(radians);");
 		if (firstNumber ==(int)firstNumber) {
-			System.out.println("\t12 = divide and show remainder;");
+			System.out.println("\t12 = divide " + printDouble(firstNumber) 
+					+ " from ? and show remainder;");
 		} else {
 			System.out.println();
 		}
-		System.out.println("2 = subtract;\t6 = " 
+		System.out.println("2 = " + printDouble(firstNumber) + " - ?;\t6 = " 
 			+ printDouble(firstNumber) + " X "
-				+ printDouble(firstNumber) + ";\t\t10 = tg (in radians);"
+				+ printDouble(firstNumber) + ";\t\t\t10 = tg from "
+					+ printDouble(firstNumber) + "(radians);"
 						+ "\t0 = new first number.");
-		System.out.println("3 = multiply;\t7 = power(any degree);"
-				+ "\t11 = ctg (in radians);");
-		System.out.println("4 = divide;\t8 = sin (in radians);");
+		System.out.println("3 = " + printDouble(firstNumber)
+			+ " X ?;\t7 = " + printDouble(firstNumber) + " to the power of ?;"
+				+ "\t11 = ctg of " + printDouble(firstNumber) + "(radians);");
+		System.out.println("4 = " + printDouble(firstNumber) + " : ?;"
+				+ "\t8 = sin from " + printDouble(firstNumber) + "(radians);");
 
 		System.out.print("Enter operation's equivalent in number with number: "
 				+ printDouble(firstNumber) + "\n> ");
