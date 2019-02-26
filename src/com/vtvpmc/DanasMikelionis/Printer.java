@@ -116,10 +116,10 @@ public class Printer {
 		System.out.println("6 = " + printDouble(firstNumber) + " X "
 				+ printDouble(firstNumber) + ";");
 		System.out.println("7 = power(any degree);");
-		System.out.println("\n8 = sin;");
-		System.out.println("9 = cos;");
-		System.out.println("10 = tg;");
-		System.out.println("11 = ctg;");
+		System.out.println("\n8 = sin (in radians);");
+		System.out.println("9 = cos (in radians);");
+		System.out.println("10 = tg (in radians);");
+		System.out.println("11 = ctg (in radians);");
 		if (firstNumber ==(int)firstNumber) {
 			System.out.println("\n12 = divide and show remainder: ");
 		}
@@ -129,7 +129,7 @@ public class Printer {
 	public static String printDouble(double number) {
 		if (number == (int)number) {
 			return String.valueOf((int)number);
-		} else if (String.valueOf(number).equals("infinity")) {
+		} else if (Double.valueOf(number).isInfinite()) {
 			return "-\ncan not divide by zero.";
 		} else {
 			return String.format("%.4f", number);
